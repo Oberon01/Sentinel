@@ -8,6 +8,7 @@ public sealed class SentinelOptions
     public EventLogOptions EventLog { get; init; } = new();
     public int PollIntervalSeconds { get; init; } = 30;
     public string LogPath { get; init; } = @"C:\Logs\Sentinel";
+    public SignalDaemonOptions SignalDaemon { get; init; } = new();
 }
 
 public sealed class ResourceThresholds

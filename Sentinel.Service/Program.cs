@@ -1,6 +1,7 @@
 using Sentinel.Core;
 using Sentinel.Monitors;
 using Sentinel.Service;
+using Sentinel.Monitors.SignalDaemon;
 using Serilog;
 
 var builder = Host.CreateApplicationBuilder(args);
@@ -37,6 +38,8 @@ builder.Services.AddSingleton<IMonitor, SystemResourceMonitor>();
 builder.Services.AddSingleton<IMonitor, NetworkMonitor>();
 builder.Services.AddSingleton<IMonitor, FileSystemMonitor>();
 builder.Services.AddSingleton<IMonitor, EventLogMonitor>();
+builder.Services.AddSingleton<IMonitor, SignalDaemonMonitor>();
+builder.Services.AddSingleton<NetworkConnectionScanner>();
 builder.Services.AddSingleton<ConfigWatcher>();
 
 // Worker
