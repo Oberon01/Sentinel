@@ -2,4 +2,5 @@
   <Project Path="Sentinel.Core/Sentinel.Core.csproj" />
   <Project Path="Sentinel.Monitors/Sentinel.Monitors.csproj" />
   <Project Path="Sentinel.Service/Sentinel.Service.csproj" />
+  <Project Path="Sentinel.CLI/Sentinel.CLI.csproj" />
 </Solution>
